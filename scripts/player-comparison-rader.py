@@ -45,6 +45,13 @@ df_percentiles[cols_to_normalize] = df[cols_to_normalize].rank(pct=True) * 100
 params = ["Ground_Duels_Won_Pct","Aerial_Duels_Won_Pct","Low_Cross_Pct","High_Cross_Pct","NUMBER_OF_PRESSES","BALL_WIN_NUMBER","BALL_WIN_NUMBER_BY_ACTION_INTERCEPTION","BALL_WIN_NUMBER_BY_ACTION_LOOSE_BALL_REGAIN","BYPASSED_OPPONENTS_BY_ACTION_DRIBBLE","PXT_DRIBBLE","PXT_PASS","PXT_PASS_PRO","PXT_DRIBBLE_PRO","ASSISTS"]
 
 # Streamlit app UI
+# Page configuration
+st.set_page_config(
+    page_title="Player Radar Comparison",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
 st.title('Player Profiling App')
 st.markdown('Compare player performance using interactive pizza plots.')
 st.markdown('Choose two players from below - players are right sided full backs with a minimum of 5 games played.')
